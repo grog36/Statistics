@@ -82,8 +82,8 @@ class NormalDistribution {
     leftCumulativeProbability(x, mean, standardDeviation) {
         let half = .5;
         let numerator = x - mean;
-        let denominator = standardDeviation * Math.sqrt(2);
-        let answer = half * (1 + erf(numerator/denominator));
+        let denominator = standardDeviation * Math.sqrt(2)
+	    let answer = half * (1 + erf(numerator/denominator));
         return answer;
     }
     
@@ -105,7 +105,6 @@ class NormalDistribution {
     
 }
 
-
 /**
  * Calculates a number's factorial (every integer greater than 1 and less than itself multiplied together).
  * @param {Number} number 
@@ -119,5 +118,5 @@ function factorial(number) {
     return output;
 }
 
-
 //Main Code
+//let {var} = new NormalDistribution();
