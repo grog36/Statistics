@@ -20,7 +20,7 @@ class BinomialDistribution {
     cumulativeProbabilityLeft(numberOfSuccesses, numberOfTrials, successProb) {
         let currentTotalProbability = 0;
         for (let i = 0; i < numberOfSuccesses; i++) {
-            currentTotalProbability += probability(i, numberOfTrials, successProb);
+            currentTotalProbability += singleProbability(i, numberOfTrials, successProb);
         }
         return currentTotalProbability;
     }
@@ -35,7 +35,7 @@ class BinomialDistribution {
     cumulativeProbabilityRight(numberOfSuccesses, numberOfTrials, successProb) {
         let currentTotalProbability = 0;
         for (let i = numberOfSuccesses; i <= numberOfTrials; i++) {
-            currentTotalProbability += probability(i, numberOfTrials, successProb)
+            currentTotalProbability += singleProbability(i, numberOfTrials, successProb)
         }
         return currentTotalProbability;
     }
